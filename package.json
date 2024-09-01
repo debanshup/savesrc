@@ -1,0 +1,22 @@
+{
+  "name": "savesrc",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "bin": {
+    "savesrc": "src/main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "commander": "^12.1.0",
+    "parsewebsourcewithpuppeteer": "file:",
+    "prettier": "^3.3.3",
+    "puppeteer": "^23.2.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
