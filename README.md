@@ -110,7 +110,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit a Pull Request.
+Contributions are welcome! Feel free to submit a Pull Request. See the [CONTRIBUTING](CONTRIBUTING) file for more details.
 
 ## Contact
 
