@@ -29,11 +29,42 @@ First off, thank you for considering contributing to **SaveSRC**! Your help is h
 Here’s an overview of the project structure:
 
 ```bash
-
+src/
+├── formatters/
+│   └── customParser.js
+├── utils/
+│   ├── saveFile.js
+│   └── version.js
+└── main.js
+package.json
 ```
 
 ### Files and Their Purpose
 
+### `src/`
+
+This is the main source directory for your application, containing all the code required to run your CLI tool.
+
+#### `src/formatters/`
+
+This directory contains modules responsible for parsing and formatting the data retrieved by the application.
+
+-   **`customParser.js`**:
+    It is likely used to format or transform the data before it is saved.
+
+#### `src/utils/`
+
+This directory contains utility functions that are used across the application for various helper tasks.
+
+-   **`saveFile.js`**:
+    This module provides a function to save the fetched and processed data to a file.
+
+-   **`version.js`**:
+    It is used to handle the `-v, --version` command, which displays the version information to the user.
+
+### `main.js`
+
+This is the main entry point.
 
 ### Testing
 
