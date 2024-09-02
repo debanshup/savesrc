@@ -17,9 +17,9 @@ program
   .helpOption("-h, --help", "Display help");
   program.addHelpText('afterAll', `
     Examples:
-      your-cli-tool -d <URL>          Process only HTML documents from the URL
-      your-cli-tool -s -st <URL>      Process JavaScript and CSS files from the URL
-      your-cli-tool -a <URL>          Process all resource types from the URL
+      savesrc -d <URL>          Process only HTML documents from the URL
+      savesrc -s -st <URL>      Process JavaScript and CSS files from the URL
+      savesrc -a <URL>          Process all resource types from the URL
     `);
     program.addHelpText('beforeAll', 
       'savesrc v'+getVersion()
