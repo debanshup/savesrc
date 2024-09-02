@@ -1,6 +1,6 @@
-## Contributing to SaveSRC
+## Contributing to savesrc
 
-First off, thank you for considering contributing to **SaveSRC**! Your help is highly appreciated. Below you'll find a guide to get started with contributing.
+First off, thank you for considering contributing to **savesrc**! Your help is highly appreciated. Below you'll find a guide to get started with contributing.
 
 ### How to Contribute
 
