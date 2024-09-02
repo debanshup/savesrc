@@ -1,6 +1,6 @@
 # savesrc
 
-**savesrc** is a command-line tool that dynamically fetches and saves various resources (like HTML documents, JavaScript files, CSS stylesheets, and images) from a specified webpage. It also provides real-time feedback via a progress bar while processing the resources.
+**savesrc** is a command-line tool that dynamically fetches and saves various resources (like HTML documents, JavaScript files, CSS stylesheets, and images) from a specified webpage.
 
 ## Features
 
@@ -15,7 +15,7 @@
 1. Clone the repository or download the source code.
 
     ```bash
-    git clone https://github.com/yourusername/savesrc.git
+    git clone https://github.com/debanshup/savesrc.git
     ```
 
 2. Navigate to the project directory.
@@ -110,7 +110,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Feel free to submit a Pull Request.
 
 ## Contact
 
