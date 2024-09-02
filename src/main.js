@@ -6,24 +6,26 @@ const getVersion = require('./utils/version')
 const program = new Command();
 
 
+// handle commands
+program.addHelpText('beforeAll',
+  'savesrc v' + getVersion()
+)
 program
-.name('savesrc')
-  .version(getVersion(),"-v, --version", "Display version")
+  .name('savesrc')
+  .version(getVersion(), "-v, --version", "Display version")
   .option("-d, --document", "Process only HTML documents")
   .option("-s, --script", "Process only JavaScript files")
   .option("-st, --style", "Process only CSS stylesheets")
   .option("-im, --image", "Process only images")
   .option("-a, --all", "Process all resources (default)")
   .helpOption("-h, --help", "Display help");
-  program.addHelpText('afterAll', `
+program.addHelpText('afterAll', `
     Examples:
       savesrc -d <URL>          Process only HTML documents from the URL
       savesrc -s -st <URL>      Process JavaScript and CSS files from the URL
       savesrc -a <URL>          Process all resource types from the URL
     `);
-    program.addHelpText('beforeAll', 
-      'savesrc v'+getVersion()
-    )
+
 program.parse(process.argv);
 const options = program.opts();
 
@@ -59,26 +61,43 @@ const options = program.opts();
         try {
 
           // Handle specific options: --document, --script, --style, --image
+
           if (options.document && resourceType === "document") {
             content = await response.text(); // Handle text-based content
             const contentType = response.headers()["content-type"];
             await saveFile(response.url(), content, resourceType, contentType);
+
+
           } else if (options.script && resourceType === "script") {
-            
+
             content = await response.text(); // Handle text-based content
             const contentType = response.headers()["content-type"];
             await saveFile(response.url(), content, resourceType, contentType);
+
+
           } else if (options.style && resourceType === "stylesheet") {
-            
+
             content = await response.text(); // Handle text-based content
             const contentType = response.headers()["content-type"];
             await saveFile(response.url(), content, resourceType, contentType);
+
+
           } else if (options.image && resourceType === "image") {
             content = await response.buffer(); // Handle binary content
             const contentType = response.headers()["content-type"];
             await saveFile(response.url(), content, resourceType, contentType);
-          } else if (options.all) {
-            
+
+
+          } else if (options.all ||
+            (
+              !options.document &&
+              !options.script &&
+              !options.style &&
+              !options.image &&
+              !options.all
+            )
+          ) {   // when all OR no option is selected 
+
             if (
               ["document", "stylesheet", "script", "xhr", "fetch"].includes(
                 resourceType
@@ -100,42 +119,11 @@ const options = program.opts();
               );
               return;
             }
-            
+
             const contentType = response.headers()["content-type"];
             await saveFile(response.url(), content, resourceType, contentType);
 
-            // Handle default behavior (if no specific options are provided)
-          } else if (
-            !options.document &&
-            !options.script &&
-            !options.style &&
-            !options.image &&
-            !options.all
-          ) {
-            if (
-              ["document", "stylesheet", "script", "xhr", "fetch"].includes(
-                resourceType
-              )
-            ) {
-              content = await response.text(); // Handle text-based content
-            } else if (
-              ["image", "media", "font", "other"].includes(resourceType)
-            ) {
-              content = await response.buffer(); // Handle binary content (image, video, audio, etc.)
-            } else if (["prefetch", "preflight"].includes(resourceType)) {
-              console.log(
-                `Skipping ${resourceType} request: ${response.url()}`
-              );
-              return;
-            } else {
-              console.log(
-                `Unhandled resource type: ${resourceType} for ${response.url()}`
-              );
-              return;
-            }
-            const contentType = response.headers()["content-type"];
-            await saveFile(response.url(), content, resourceType, contentType);
-          }
+          } 
         } catch (error) {
           console.log(
             `Error processing ${resourceType} resource from ${response.url()}: ${error}`

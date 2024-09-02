@@ -13,10 +13,9 @@
   "keywords": [],
   "dependencies": {
     "commander": "^12.1.0",
-    "parsewebsourcewithpuppeteer": "file:",
     "prettier": "^3.3.3",
-    "puppeteer": "^23.2.1"
+    "puppeteer": "^23.2.1",
+    "savesrc": "file:"
   },
-  "devDependencies": {},
   "description": ""
 }
