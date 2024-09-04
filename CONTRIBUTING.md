@@ -7,7 +7,7 @@ First off, thank you for considering contributing to **savesrc**! Your help is h
 1. **Fork the repository** and create your branch from `main`.
 2. **Clone** your fork to your local machine:
     ```bash
-    git clone https://github.com/yourusername/savesrc.git
+    git clone https://github.com/debanshup/savesrc.git
     ```
 3. **Install dependencies**:
     ```bash

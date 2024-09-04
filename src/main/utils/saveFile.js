@@ -9,11 +9,10 @@ async function saveFile(url, content, resourceType, contentType) {
 
     // filepath defined first
     let filePath = path.join(
-        // __dirname,
         "src",
         parsedUrl.hostname,
         parsedUrl.pathname
-            .replace(/[\/\\]/g, "_")
+            .replace(/[\/\\]/g, "_")    // handle naming conflicts
     );
 
     // if a file is html

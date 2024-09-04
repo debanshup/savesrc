@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const puppeteer = require("puppeteer");
-const saveFile = require("./utils/saveFile");
+const saveFile = require("../main/utils/saveFile");
 const { Command } = require("commander");
-const getVersion = require('./utils/version')
+const getVersion = require('../main/utils/version')
 const program = new Command();
 
 

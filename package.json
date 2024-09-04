@@ -1,21 +1,28 @@
 {
-  "name": "savesrc",
-  "version": "1.0.0",
-  "main": "./src/main.js",
-  "bin": {
-    "savesrc": "src/main.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "dependencies": {
-    "commander": "^12.1.0",
-    "prettier": "^3.3.3",
-    "puppeteer": "^23.2.1",
-    "savesrc": "file:"
-  },
-  "description": ""
+    "name": "savesrc",
+    "description": "savesrc is a command-line tool that dynamically fetches and saves various resources (like HTML documents, JavaScript files, CSS stylesheets, and images) from a specified webpage.",
+    "author": "Debanshu Panigrahi",
+    "version": "1.0.0",
+    "main": "./src/main/main.js",
+    "bin": {
+        "savesrc": "src/main/main.js"
+    },
+    "scripts": {
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    },
+    "license": "ISC",
+    "type": "commonjs",
+    "keywords": [],
+    "dependencies": {
+        "commander": "^12.1.0",
+        "prettier": "^3.3.3",
+        "puppeteer": "^23.2.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.25.2",
+        "@babel/preset-env": "^7.25.4",
+        "babel-jest": "^29.7.0",
+        "jest": "^29.7.0",
+        "jest-html-reporter": "^3.10.2"
+    }
 }
