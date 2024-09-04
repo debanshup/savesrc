@@ -1,8 +1,8 @@
-const saveFile = require("../main/utils/saveFile"); // Import the saveFile utility function
-const fs = require("fs"); // Mock the fs module to avoid actual file system operations during tests
-const path = require("path"); // Path module to handle file and directory paths
-const prettier = require("prettier"); // Mock the Prettier library for formatting content
-const customParser = require("../main/formatters/customParser"); // Mock a custom parser to determine how files should be formatted
+const saveFile = require("../main/utils/saveFile"); 
+const fs = require("fs"); 
+const path = require("path"); 
+const prettier = require("prettier"); 
+const customParser = require("../main/formatters/customParser"); 
 
 // Mock the fs, prettier, and customParser modules to control their behavior in tests
 jest.mock("fs");
@@ -17,7 +17,6 @@ describe("saveFile", () => {
 
     // Test case: Saving a formatted HTML file
     test("should save a formatted HTML file", async () => {
-        // Set up inputs and mocked returns
         const url = "https://example.com/index"; // The URL of the resource
         const content = "<html></html>"; // The raw HTML content
         const resourceType = "document"; // The type of resource (used for determining the parser)

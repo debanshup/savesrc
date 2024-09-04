@@ -36,13 +36,13 @@ src/
 │   ├── utils/
 │   │   ├── saveFile.js
 │   │   ├── version.js
-│   │   ├── decodeBase64Image.js         
-│   │   └── isBase64Image.js      
+│   │   ├── decodeBase64Image.js
+│   │   └── isBase64Image.js
 │   └── main.js
 ├── test/
 │   ├── saveFile.test.js
-│   ├── customParser.test.js  
-│   └── version.test.js        
+│   ├── customParser.test.js
+│   └── version.test.js
 package.json
 ```
 
@@ -68,6 +68,12 @@ This directory contains utility functions that are used across the application f
 
 -   **`version.js`**:
     It is used to handle the `-v, --version` command, which displays the version information to the user.
+
+-   **`decodeBase64Image.js`**:
+    Function is not properly implemented
+    
+-   **`isBase64Image.js `**:
+    Function is not properly implemented
 
 ### `src/main/main.js`
 
