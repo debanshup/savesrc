@@ -30,12 +30,19 @@ Here’s an overview of the project structure:
 
 ```bash
 src/
-├── formatters/
-│   └── customParser.js
-├── utils/
-│   ├── saveFile.js
-│   └── version.js
-└── main.js
+├── main/
+│   ├── formatters/
+│   │   └── customParser.js
+│   ├── utils/
+│   │   ├── saveFile.js
+│   │   ├── version.js
+│   │   ├── decodeBase64Image.js         
+│   │   └── isBase64Image.js      
+│   └── main.js
+├── test/
+│   ├── saveFile.test.js
+│   ├── customParser.test.js  
+│   └── version.test.js        
 package.json
 ```
 
@@ -45,14 +52,14 @@ package.json
 
 This is the main source directory for your application, containing all the code required to run your CLI tool.
 
-#### `src/formatters/`
+#### `src/main/formatters/`
 
 This directory contains modules responsible for parsing and formatting the data retrieved by the application.
 
 -   **`customParser.js`**:
     It is likely used to format or transform the data before it is saved.
 
-#### `src/utils/`
+#### `src/main/utils/`
 
 This directory contains utility functions that are used across the application for various helper tasks.
 
@@ -62,7 +69,7 @@ This directory contains utility functions that are used across the application f
 -   **`version.js`**:
     It is used to handle the `-v, --version` command, which displays the version information to the user.
 
-### `main.js`
+### `src/main/main.js`
 
 This is the main entry point.
 

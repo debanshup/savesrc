@@ -3,6 +3,8 @@ const puppeteer = require("puppeteer");
 const saveFile = require("../main/utils/saveFile");
 const { Command } = require("commander");
 const getVersion = require('../main/utils/version')
+// const isBase64Image = require('./utils/helper')
+// const decodeBase64 = require('./utils/decoder')
 const program = new Command();
 
 
@@ -83,6 +85,13 @@ const options = program.opts();
 
 
           } else if (options.image && resourceType === "image") {
+            // if (isBase64Image(response.url())) {    
+            //     console.log('base64');
+            //         // handle base64
+            //     content = await decodeBase64(response.url())
+            // } else {
+
+            // }
             content = await response.buffer(); // Handle binary content
             const contentType = response.headers()["content-type"];
             await saveFile(response.url(), content, resourceType, contentType);

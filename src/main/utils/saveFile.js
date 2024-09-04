@@ -48,6 +48,8 @@ async function saveFile(url, content, resourceType, contentType) {
 
     } catch (error) {
         console.log('error saving type: ' + resourceType + '\nPath: ' + filePath);
+        // console.log(error);
+        
 
 
         // console.log("Error saving file "+filePath+' '+ error);
