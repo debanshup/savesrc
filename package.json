@@ -7,19 +7,38 @@
     "bin": {
         "savesrc": "src/main/main.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/debanshup/savesrc.git"
+    },
+    "bugs": {
+        "url": "https://github.com/debanshup/savesrc/issues"
+    },
+    "homepage": "https://github.com/debanshup/savesrc",
     "scripts": {
-        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "build": "babel src --out-dir lib"
     },
     "license": "ISC",
+    "keywords": [
+        "command-line",
+        "tool",
+        "fetch",
+        "save",
+        "resources",
+        "HTML",
+        "JavaScript",
+        "CSS",
+        "puppeteer"
+    ],
     "type": "commonjs",
-    "keywords": [],
     "dependencies": {
         "commander": "^12.1.0",
         "prettier": "^3.3.3",
-        "puppeteer": "^23.2.1",
-        "savesrc": "file:"
+        "puppeteer": "^23.2.1"
     },
     "devDependencies": {
+        "@babel/cli": "^7.25.6",
         "@babel/core": "^7.25.2",
         "@babel/preset-env": "^7.25.4",
         "babel-jest": "^29.7.0",

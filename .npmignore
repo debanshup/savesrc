@@ -1,0 +1,6 @@
+# Directories
+src/
+
+# IDE files
+.vscode/
+.editorconfig/
