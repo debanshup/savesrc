@@ -5,7 +5,7 @@ First off, thank you for considering contributing to **savesrc**! Your help is h
 ### How to Contribute
 
 1. **Fork the repository** and create your branch from `main`.
-2. **Clone** your fork to your local machine and navigate to the project dorectory:
+2. **Clone** your fork to your local machine and navigate to the project directory:
     ```bash
     git clone https://github.com/debanshup/savesrc.git
     cd savesrc
