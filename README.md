@@ -12,28 +12,9 @@
 
 ## Installation
 
-1. Clone the repository or download the source code.
 
     ```bash
-    git clone https://github.com/debanshup/savesrc.git
-    ```
-
-2. Navigate to the project directory.
-
-    ```bash
-    cd savesrc
-    ```
-
-3. Install the necessary dependencies:
-
-    ```bash
-    npm install
-    ```
-
-4. Link the CLI tool globally (optional):
-
-    ```bash
-    npm link
+    npm install savesrc
     ```
 
 ## Usage
