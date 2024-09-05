@@ -66,23 +66,24 @@
 -   **Process only HTML documents**:
 
     ```bash
-    savesrc -d <"URL">
+    savesrc -d "http://example.com"
     ```
 
 -   **Process JavaScript and CSS files**:
 
     ```bash
-    savesrc -s -st <"URL">
+    savesrc -s -st "http://example.com"
     ```
 
 -   **Process all resource types (default)**:
     ```bash
-    savesrc -a <"URL">
+    savesrc -a "http://example.com"
     ```
     _or_
     ```bash
-    savesrc <"URL">
+    savesrc "http://example.com"
     ```
+
 
 ## License
 

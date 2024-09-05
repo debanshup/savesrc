@@ -9,7 +9,6 @@ async function saveFile(url, content, resourceType, contentType) {
 
     // filepath defined first
     let filePath = path.join(
-        "src",
         parsedUrl.hostname,
         parsedUrl.pathname
             .replace(/[\/\\]/g, "_")    // handle naming conflicts
@@ -44,12 +43,12 @@ async function saveFile(url, content, resourceType, contentType) {
 
         // Write the formatted content to a file
         fs.writeFileSync(filePath, formattedContent, "utf8");
-        console.log('saving ' +path.basename(filePath));
+        console.log('saving ' + path.basename(filePath));
 
     } catch (error) {
         console.log('error saving type: ' + resourceType + '\nPath: ' + filePath);
         // console.log(error);
-        
+
 
 
         // console.log("Error saving file "+filePath+' '+ error);
