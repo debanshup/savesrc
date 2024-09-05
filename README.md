@@ -12,8 +12,7 @@
 
 ## Installation
 
-
-    ```bash
+-   ```bash
     npm install savesrc
     ```
 
