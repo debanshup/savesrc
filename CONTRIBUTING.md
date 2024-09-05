@@ -17,7 +17,7 @@ First off, thank you for considering contributing to **savesrc**! Your help is h
 4. **Make your changes** and **add tests** if necessary.
 5. **Commit your changes**:
     ```bash
-    git commit -m "Your descriptive commit message"
+    git commit -m "commit message"
     ```
 6. **Push your branch** to GitHub:
     ```bash
@@ -90,7 +90,7 @@ npm test
 
 ### Code Style
 
-Please adhere to the existing coding style and conventions. If the project uses a linter, make sure to run it before committing:
+Please adhere to the existing coding style and conventions. This project uses eslint, make sure to run it before committing:
 
 ```bash
 npm run lint
