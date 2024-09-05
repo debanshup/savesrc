@@ -13,7 +13,7 @@
 ## Installation
 
 -   ```bash
-    npm install savesrc
+    npm install -g savesrc
     ```
 
 ## Usage
