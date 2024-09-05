@@ -2,7 +2,7 @@
     "name": "savesrc",
     "description": "savesrc is a command-line tool that dynamically fetches and saves various resources (like HTML documents, JavaScript files, CSS stylesheets, and images) from a specified webpage.",
     "author": "Debanshu Panigrahi",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "./src/main/main.js",
     "bin": {
         "savesrc": "src/main/main.js"
