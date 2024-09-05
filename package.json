@@ -36,8 +36,7 @@
     "dependencies": {
         "commander": "^12.1.0",
         "prettier": "^3.3.3",
-        "puppeteer": "^23.2.1",
-        "savesrc": "file:"
+        "puppeteer": "^23.2.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.25.6",
