@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // const puppeteer = require("puppeteer-core");
-const puppeteer = require("puppeteer")
+const puppeteer = require("puppeteer-core")
 const saveFile = require("../main/utils/saveFile");
 const { Command } = require("commander");
 const getVersion = require('../main/utils/version')
@@ -44,7 +44,7 @@ const options = program.opts();
 
     const browser = await puppeteer.launch(
         {
-            headless: "shell",
+            channel:"chrome"
 
             //   different browser can be used
             // executablePath: "C://Program Files/Google/Chrome/Application/chrome.exe" || "C://Program Files/Internet Explorer/iexplore.exe"
